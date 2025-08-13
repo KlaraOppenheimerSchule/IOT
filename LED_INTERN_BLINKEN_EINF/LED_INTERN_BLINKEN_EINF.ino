@@ -1,6 +1,6 @@
 void setup() 
 { 
-  pinMode(2, OUTPUT); //hier muss evtl 1 stat 2 stehen 
+  pinMode(1, OUTPUT); //hier muss evtl 1 stat 2 stehen 
   digitalWrite(2, HIGH); // LED off! by making the voltage LOW 
 } 
 
