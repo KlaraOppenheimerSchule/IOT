@@ -1,6 +1,8 @@
+const int ledPin =1;
+
 void setup() 
 { 
-  pinMode(1, OUTPUT); // SET pin 1 in pinmode output
+  pinMode(ledPin, OUTPUT); // SET pin 1 in pinmode output
   digitalWrite(1, HIGH); // LED off! by making the voltage LOW 
 } 
 
