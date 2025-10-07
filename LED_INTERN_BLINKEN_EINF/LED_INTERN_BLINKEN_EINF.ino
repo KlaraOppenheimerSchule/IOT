@@ -1,14 +1,14 @@
 void setup() 
 { 
-  pinMode(1, OUTPUT); //hier muss evtl 1 stat 2 stehen 
-  digitalWrite(2, HIGH); // LED off! by making the voltage LOW 
+  pinMode(1, OUTPUT); // SET pin 1 in pinmode output
+  digitalWrite(1, HIGH); // LED off! by making the voltage LOW 
 } 
 
 void loop() 
 { 
-  digitalWrite(2, HIGH); // turn LED off! 
+  digitalWrite(1, HIGH); // turn LED off! 
   delay(1000); // wait for a second 
-  digitalWrite(2, LOW); // turn LED on! 
+  digitalWrite(1, LOW); // turn LED on! 
   delay(1000); // wait for a second 
 } 
 
