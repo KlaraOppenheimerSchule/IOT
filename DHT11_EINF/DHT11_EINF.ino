@@ -1,7 +1,7 @@
 #include "DHT.h"
 
-#define DHTPIN 4          // GPIO-Pin, an dem DATA angeschlossen ist
-#define DHTTYPE DHT11     // Sensor-Typ
+#define DHTPIN 4         
+#define DHTTYPE DHT11     
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -15,7 +15,7 @@ void loop() {
 
   if (isnan(temp) || isnan(hum)) {
     Serial.println("Fehler beim Lesen vom DHT11!");
-    delay(2000); // alle 2 Sekunden neue Messung
+    delay(2000); 
     return;
   }
 
@@ -25,5 +25,8 @@ void loop() {
   Serial.print(hum);
   Serial.println(" %");
 
-  delay(2000); // alle 2 Sekunden neue Messung
+  delay(2000); 
 }
+
+
+
