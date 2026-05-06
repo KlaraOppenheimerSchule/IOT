@@ -1,3 +1,5 @@
+//Doc: https://docs.arduino.cc/language-reference/en/functions/wifi/wificlass/
+
 #include <WiFi.h>
 
 // ===== Zugangsdaten =====
