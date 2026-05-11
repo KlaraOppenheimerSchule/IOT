@@ -1,9 +1,12 @@
-//Libary for DHT11
+//Libary for DHT11 - needs to be installed Sketch/Include Libary, also other libaries
 #include "DHT.h"
 
 //Libaries for OLED Display
+//I2C-Kommunikation
 #include <Wire.h>
+//Zeichnen auf Display
 #include <Adafruit_GFX.h>
+//Displaytreiber
 #include <Adafruit_SSD1306.h>
 
 //PINS for DHT11
@@ -17,13 +20,14 @@
 //Create an OLED display object connected to I2C
 Adafruit_SSD1306 oled(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
+//Create an object of the DHT class
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
   Serial.begin(19200);
 
   //OLED DISPLAY SETUP
-  //initialize OLED display with I2C address 0x3C
+  //initialize OLED display with I2C address 0x3C, sofern nicht true
   if (!oled.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println(F("failed to start SSD1306 OLED"));
     while (1);

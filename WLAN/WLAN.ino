@@ -16,7 +16,7 @@ void setup() {
   Serial.begin(115200);
   pinMode(ledPin, OUTPUT);
 
-  Serial.println("\n--- WLAN-Verbindung wird gestartet ---");
+  Serial.println("--- WLAN-Verbindung wird gestartet ---");
 
   connectToWiFi();
 }
@@ -24,7 +24,7 @@ void setup() {
 void loop() {
   // Falls Verbindung verloren geht → neu verbinden
   if (WiFi.status() != WL_CONNECTED) {
-    Serial.println("\nVerbindung verloren! Neuer Versuch...");
+    Serial.println("Verbindung verloren! Neuer Versuch...");
     connectToWiFi();
   }
 }
@@ -55,7 +55,7 @@ void connectToWiFi() {
   if (WiFi.status() == WL_CONNECTED) {
     digitalWrite(ledPin, HIGH);  // LED dauerhaft AN
 
-    Serial.println("\n Verbindung erfolgreich hergestellt!");
+    Serial.println("Verbindung erfolgreich hergestellt!");
     Serial.print("IP-Adresse: ");
     Serial.println(WiFi.localIP());
 
@@ -66,7 +66,7 @@ void connectToWiFi() {
   } else {
     digitalWrite(ledPin, LOW);
 
-    Serial.println("\n Zeitüberschreitung – Verbindung fehlgeschlagen!");
+    Serial.println("Zeitüberschreitung – Verbindung fehlgeschlagen!");
     Serial.println("Neuer Versuch in 5 Sekunden...");
     delay(5000);
 
