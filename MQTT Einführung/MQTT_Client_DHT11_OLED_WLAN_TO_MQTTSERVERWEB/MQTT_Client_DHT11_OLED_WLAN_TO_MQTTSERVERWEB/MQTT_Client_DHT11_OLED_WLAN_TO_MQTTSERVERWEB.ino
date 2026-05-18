@@ -32,10 +32,13 @@ DHT dht(DHTPIN, DHTTYPE);
 const char* WIFI_SSID = "FBIT.IoT.Router6";
 const char* WIFI_PASS = "WueLoveIoT";
 
+
 // ---- MQTT-Broker ----
 const char* MQTT_HOST = "broker.hivemq.com"; // z.B. MQTT auf Raspberry
 const uint16_t MQTT_PORT = 1883;          // unverschlüsselt
 
+
+// TODO: Each group have to choice an own topicname
 const char* TOPIC_JSON = "esp32/telemetry"; // Ziel-Topic für JSON
 
 // ---- Netzwerkobjekte ----
