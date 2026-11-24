@@ -17,6 +17,4 @@ void loop() {
   } else {
     digitalWrite(ledPin, LOW);       // Taster losgelassen -> LED aus
   }
-
-  delay(50);                         // einfache Entprellung
 }
